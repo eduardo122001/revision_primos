@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653487500 source:d:\c++\generador_numeros_primos\main.cpp
+	<iostream>
+	<math.h>
+
