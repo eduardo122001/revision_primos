@@ -61,7 +61,8 @@ int main()
 {   int o=1;
     cout<<"NUMEROS PRIMOS DEL 1 AL 1000"<<endl;
 
-
+    cout<<"("<<1<<")";
+            cout<<2<<"-";
     for(long long i=3;i<1000  ;i++){
         long long s=sqrt(i);
         if(miller_rabin(i,s)){
