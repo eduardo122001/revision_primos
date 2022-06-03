@@ -58,26 +58,47 @@ long long miller_rabin(long long n , long long s){
 
 int main()
 
-{   cout<<miller_rabin(7,6);
-    /*
-    // esta correcto hasta 3 digitos
+{   int o=1;
+    cout<<"NUMEROS PRIMOS DEL 1 AL 1000"<<endl;
+
+
     for(long long i=3;i<1000  ;i++){
         long long s=sqrt(i);
-
-        if(miller_rabin(i,s)){cout<<i<<endl;}
+        if(miller_rabin(i,s)){
+            o++;
+            cout<<"("<<o<<")";
+            cout<<i<<"-";}
 
     }
-    */
-    int o=0;
+    cout<<endl;
+    cout<<"CANTIDAD DE NUMEROS PRIMOS TOTAL = "<<o<<endl<<endl;
+
+    cout<<"NUMEROS PRIMOS DEL 1000 AL 10000"<<endl;
+    int e=0;
     for(long long i=1000;i<10000  ;i++){
         long long s=sqrt(i);
 
-        if(miller_rabin(i,100000)){
-            o++;
-            cout<<o<<"->";
-            cout<<i<<endl;}
-
+        if(miller_rabin(i,s)){
+            e++;
+            cout<<"("<<e<<")";
+            cout<<i<<"-";}
     }
+    cout<<endl<<"CANTIDAD DE NUMEROS PRIMOS TOTAL = "<<o<<endl<<endl;
+
+    cout<<"NUMEROS PRIMOS DEL 1000 AL 10000"<<endl;
+
+    int r=0;
+    for(long long i=10000;i<100000 ;i++){
+        long long s=sqrt(i);
+
+        if(miller_rabin(i,s)){
+            r++;
+            cout<<"("<<r<<")";
+            cout<<i<<"-";}
+    }
+    cout<<endl<<"PRIMOS TOTAL DEL 1 AL 1000= "<<o<<endl;
+    cout<<endl<<"PRIMOS TOTAL DEL 1000 AL 10000= "<<e<<endl;
+    cout<<endl<<"PRIMOS TOTAL DEL 10000 AL 100000= "<<r<<endl;
 
 
 
